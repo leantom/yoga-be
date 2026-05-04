@@ -32,9 +32,7 @@ type resourceHandler struct {
 func mountResource(r chi.Router, registry firestoredb.Registry, cfg resourceConfig) {
 	h := resourceHandler{repo: registry.Repository(cfg.Collection), cfg: cfg}
 	r.Route(cfg.Path, func(r chi.Router) {
-		r.Get("", h.list)
 		r.Get("/", h.list)
-		r.Post("", h.create)
 		r.Post("/", h.create)
 		r.Get("/{id}", h.get)
 		r.Patch("/{id}", h.update)
