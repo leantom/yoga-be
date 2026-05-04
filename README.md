@@ -113,7 +113,7 @@ gcloud builds submit \
 
 Required runtime environment:
 
-- `GOOGLE_CLOUD_PROJECT`
+- `GOOGLE_CLOUD_PROJECT`, optional on Cloud Run because the service can fall back to the GCP metadata server
 - `FIRESTORE_DATABASE`, optional, defaults to `(default)`
 - `PORT`, supplied by Cloud Run
 
