@@ -1,0 +1,33 @@
+{
+  "indexes": [
+    { "collectionGroup": "users", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "users", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "authProvider", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "yoga_categories", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "isActive", "order": "ASCENDING" }, { "fieldPath": "order", "order": "ASCENDING" } ] },
+    { "collectionGroup": "yoga_exercises", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "categoryId", "order": "ASCENDING" }, { "fieldPath": "title", "order": "ASCENDING" } ] },
+    { "collectionGroup": "yoga_exercises", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "categoryId", "order": "ASCENDING" }, { "fieldPath": "level", "order": "ASCENDING" }, { "fieldPath": "title", "order": "ASCENDING" } ] },
+    { "collectionGroup": "yoga_exercises", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "categoryId", "order": "ASCENDING" }, { "fieldPath": "isActive", "order": "ASCENDING" }, { "fieldPath": "title", "order": "ASCENDING" } ] },
+    { "collectionGroup": "yoga_exercises", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "categoryId", "order": "ASCENDING" }, { "fieldPath": "isPremium", "order": "ASCENDING" }, { "fieldPath": "title", "order": "ASCENDING" } ] },
+    { "collectionGroup": "yoga_exercises", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "bodyParts", "arrayConfig": "CONTAINS" }, { "fieldPath": "title", "order": "ASCENDING" } ] },
+    { "collectionGroup": "yoga_exercises", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "benefits", "arrayConfig": "CONTAINS" }, { "fieldPath": "title", "order": "ASCENDING" } ] },
+    { "collectionGroup": "yoga_programs", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "categoryId", "order": "ASCENDING" }, { "fieldPath": "title", "order": "ASCENDING" } ] },
+    { "collectionGroup": "yoga_programs", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "categoryId", "order": "ASCENDING" }, { "fieldPath": "level", "order": "ASCENDING" }, { "fieldPath": "title", "order": "ASCENDING" } ] },
+    { "collectionGroup": "yoga_programs", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "categoryId", "order": "ASCENDING" }, { "fieldPath": "isActive", "order": "ASCENDING" }, { "fieldPath": "title", "order": "ASCENDING" } ] },
+    { "collectionGroup": "program_exercises", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "programId", "order": "ASCENDING" }, { "fieldPath": "dayNumber", "order": "ASCENDING" }, { "fieldPath": "order", "order": "ASCENDING" } ] },
+    { "collectionGroup": "program_exercises", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "exerciseId", "order": "ASCENDING" }, { "fieldPath": "dayNumber", "order": "ASCENDING" } ] },
+    { "collectionGroup": "user_progress", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "userId", "order": "ASCENDING" }, { "fieldPath": "lastWatchedAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "user_progress", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "userId", "order": "ASCENDING" }, { "fieldPath": "programId", "order": "ASCENDING" }, { "fieldPath": "lastWatchedAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "user_progress", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "userId", "order": "ASCENDING" }, { "fieldPath": "isCompleted", "order": "ASCENDING" }, { "fieldPath": "completedAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "favorites", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "userId", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "favorites", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "exerciseId", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "subscription_plans", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "isActive", "order": "ASCENDING" }, { "fieldPath": "price", "order": "ASCENDING" } ] },
+    { "collectionGroup": "user_subscriptions", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "userId", "order": "ASCENDING" }, { "fieldPath": "endDate", "order": "DESCENDING" } ] },
+    { "collectionGroup": "user_subscriptions", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "userId", "order": "ASCENDING" }, { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "endDate", "order": "DESCENDING" } ] },
+    { "collectionGroup": "payments", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "userId", "order": "ASCENDING" }, { "fieldPath": "paidAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "payments", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "subscriptionId", "order": "ASCENDING" }, { "fieldPath": "paidAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "payments", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "paidAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "reviews", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "exerciseId", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "reviews", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "userId", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" } ] },
+    { "collectionGroup": "reviews", "queryScope": "COLLECTION", "fields": [ { "fieldPath": "exerciseId", "order": "ASCENDING" }, { "fieldPath": "rating", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" } ] }
+  ],
+  "fieldOverrides": []
+}
