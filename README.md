@@ -95,6 +95,22 @@ The included `firestore.rules` denies direct client access. The Cloud Run servic
 
 ## Cloud Run Deployment
 
+### Repository source deploy
+
+Cloud Run repository deploys use Google Buildpacks. This repo keeps the Go
+entrypoint under `cmd/api`, so `project.toml` sets `GOOGLE_BUILDABLE=./cmd/api`
+for those builds.
+
+Runtime environment:
+
+- `FIRESTORE_DATABASE`, optional, defaults to `(default)`
+- `PORT`, supplied by Cloud Run
+
+The Cloud Run service account needs Firestore permissions, usually
+`roles/datastore.user`.
+
+### Cloud Build config
+
 Create an Artifact Registry repository once:
 
 ```bash
@@ -111,13 +127,14 @@ gcloud builds submit \
   --substitutions _REGION=asia-southeast1,_SERVICE=yoga-api
 ```
 
-Required runtime environment:
+Runtime environment:
 
 - `GOOGLE_CLOUD_PROJECT`, optional on Cloud Run because the service can fall back to the GCP metadata server
 - `FIRESTORE_DATABASE`, optional, defaults to `(default)`
 - `PORT`, supplied by Cloud Run
 
-The Cloud Run service account needs Firestore permissions, usually `roles/datastore.user`.
+The Cloud Run service account needs Firestore permissions, usually
+`roles/datastore.user`.
 
 ## Verify
 
